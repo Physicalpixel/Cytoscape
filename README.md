@@ -1,6 +1,6 @@
 # Layouts
 
-[Cola](https://physicalpixel.github.io/Cytoscape/Cola/index.htm)
+[Cola](https://physicalpixel.github.io/Cytoscape/Cola/index.html)
 
 [Euler](https://physicalpixel.github.io/Cytoscape/Cola/index.htm)
 
