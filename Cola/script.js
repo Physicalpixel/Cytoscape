@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 },
             },
         ],
-        elements: fetch("test.json")
+        elements: fetch("https://raw.githubusercontent.com/Physicalpixel/Cytoscape/main/random_nodes.json")
             .then(function(res) {
                 return res.json();
             })
