@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // demo your layout
         layout: {
 
-            name: "spread",
+            name: "cola",
             randomize: true,
             //animate: false,
             // name: 'preset'
