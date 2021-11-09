@@ -1,3 +1,3 @@
 # Layouts
 
-[Cola](https://physicalpixel.github.io/D3/Extreme_Temperature/index.html)
+[Cola](https://raw.githubusercontent.com/Physicalpixel/Cytoscape/main/Cola/index.htm)
