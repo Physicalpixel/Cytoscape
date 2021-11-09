@@ -1,3 +1,3 @@
 # Layouts
 
-[Cola](https://raw.githubusercontent.com/Physicalpixel/Cytoscape/main/Cola/index.htm)
+[Cola](https://physicalpixel.github.io/Cytoscape/Cola/index.htm)
