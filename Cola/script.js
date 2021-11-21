@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
         ],
 
         // elements: fetch('./data/planar-chain.json').then(function( res ){ return res.json(); })
-        elements: fetch("silo3.json")
+        elements: fetch("./Cytoscape/silo3.json")
             .then(function(res) {
                 return res.json();
             })
