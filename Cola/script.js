@@ -56,17 +56,16 @@ document.addEventListener("DOMContentLoaded", function() {
             {
                 selector: "edge",
                 style: {
-
+                     "line-color": "grey",
+                    width: 0.9,
+                    opacity: 0.5,
                     "target-arrow-shape": "triangle",
                     "target-arrow-color": "green",
-                    "target-arrow-opacity": 1,
                     //"arrow-scale": 0.5,
                     "curve-style": function() {
                         return "bezier";
                     },
-                    "line-color": "grey",
-                    width: 0.9,
-                    opacity: 0.5,
+                   
                 },
             },
         ],
