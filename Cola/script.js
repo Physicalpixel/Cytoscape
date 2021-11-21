@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
             {
                 selector: "edge",
                 style: {
-                     "line-color": "grey",
+                    "line-color": "grey",
                     width: 0.9,
                     opacity: 0.5,
                     "target-arrow-shape": "triangle",
@@ -65,7 +65,6 @@ document.addEventListener("DOMContentLoaded", function() {
                     "curve-style": function() {
                         return "bezier";
                     },
-                   
                 },
             },
         ],
