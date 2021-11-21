@@ -2,16 +2,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var startTime = performance.now();
 
-
     var cy = (window.cy = cytoscape({
         container: document.getElementById("cy"),
 
         // demo your layout
         layout: {
-
             name: "cola",
             randomize: true,
-            //animate: false,
+
             // name: 'preset'
 
             //name: 'spread',
@@ -22,33 +20,64 @@ document.addEventListener("DOMContentLoaded", function() {
 
         style: [{
                 selector: "node",
+
                 style: {
-                    "background-color": "grey",
+                    /*display: function(ele) {
+                        if (ele._private.data["hierarchy_level"] > 3) {
+                            return "none";
+                        }
+                    },*/
+                    'border-color': 'white',
+                    'border-width': 4,
+                    "background-color": function(ele) {
+                        if (ele._private.data["gender"] == "Female") {
+
+                            return "#ff7ef3";
+                        } else {
+                            console.log(ele._private.data["gender"])
+                            return "#00c2ff";
+                        }
+                    },
                     ["label"]: function(ele) {
                         return ele._private.data["id"];
                     },
+                    "text-valign": "center",
+                    "text-halign": "center",
                     "font-size": "12px",
-                    width: 15,
-                    height: 15
+                    width: function(ele) {
+                        return 40
+                    },
+                    height: function(ele) {
+                        return 40
+                    },
                 },
             },
 
             {
                 selector: "edge",
                 style: {
-                    "line-color": "red",
-                    opacity: 0.3,
-                    'width': 1
 
+                    "target-arrow-shape": "triangle",
+                    "target-arrow-color": "green",
+                    "target-arrow-opacity": 1,
+                    //"arrow-scale": 0.5,
+                    "curve-style": function() {
+                        return "bezier";
+                    },
+                    "line-color": "grey",
+                    width: 0.9,
+                    opacity: 0.5,
                 },
             },
         ],
-        elements: fetch("https://raw.githubusercontent.com/Physicalpixel/Cytoscape/main/random_nodes.json")
+
+        // elements: fetch('./data/planar-chain.json').then(function( res ){ return res.json(); })
+        elements: fetch("./data/silo3.json")
             .then(function(res) {
                 return res.json();
             })
             .then((data) => {
-                return data["elements"];
+                return data["graph"]["elements"];
             }),
 
         ready: function() {
@@ -60,7 +89,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     }));
-
-
 
 });
